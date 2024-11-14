@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "Pallas"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "A short description of Pallas."
   spec.description  = "A test Pallas Framework"
   spec.homepage     = "http://EXAMPLE/Pallas"
@@ -46,15 +46,16 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source_files  = "release/*.framework/Headers/**/*.h"
-  spec.vendored_frameworks = [
-    "Pallas_Frameworks/App.xcframework",
-    "Pallas_Frameworks/app_links.xcframework",
-    "Pallas_Frameworks/device_info_plus.xcframework",
-    "Pallas_Frameworks/flutter_inappwebview_ios.xcframework",
-    "Pallas_Frameworks/FlutterPluginRegistrant.xcframework",
-    "Pallas_Frameworks/OrderedSet.xcframework",
-    "Pallas_Frameworks/ShorebirdFlutter.xcframework",
-  ]
+  # spec.vendored_frameworks = [
+  #   "Pallas_Frameworks/App.xcframework",
+  #   "Pallas_Frameworks/app_links.xcframework",
+  #   "Pallas_Frameworks/device_info_plus.xcframework",
+  #   "Pallas_Frameworks/flutter_inappwebview_ios.xcframework",
+  #   "Pallas_Frameworks/FlutterPluginRegistrant.xcframework",
+  #   "Pallas_Frameworks/OrderedSet.xcframework",
+  #   "Pallas_Frameworks/ShorebirdFlutter.xcframework",
+  # ]
+  spec.ios.vendored_frameworks = "*/*.xcframework"
 
   # spec.public_header_files = "Classes/**/*.h"
 
