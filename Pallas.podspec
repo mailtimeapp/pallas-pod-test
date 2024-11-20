@@ -34,7 +34,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source       = { :git => "https://github.com/mailtimeapp/pallas-pod-test.git", :tag => "#{spec.version}" }
-  spec.source       = { :http => "https://github.com/mailtimeapp/pallas-pod-test/releases/download/#{spec.version}/Pallas_Frameworks.zip"}
+  spec.source       = { :http => "https://github.com/mailtimeapp/pallas-pod-test/releases/download/#{spec.version}/Pallas_Frameworks.zip", :type => "zip"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -55,7 +55,17 @@ Pod::Spec.new do |spec|
   #   "Pallas_Frameworks/OrderedSet.xcframework",
   #   "Pallas_Frameworks/ShorebirdFlutter.xcframework",
   # ]
-  spec.ios.vendored_frameworks = "*/*.xcframework"
+  spec.vendored_frameworks = [
+    "App.xcframework",
+    "app_links.xcframework",
+    "device_info_plus.xcframework",
+    "flutter_inappwebview_ios.xcframework",
+    "FlutterPluginRegistrant.xcframework",
+    "OrderedSet.xcframework",
+    "ShorebirdFlutter.xcframework",
+  ]
+  # spec.ios.vendored_frameworks = "*.xcframework"
+  spec.ios.preserve_paths = "*"
 
   # spec.public_header_files = "Classes/**/*.h"
 
