@@ -17,14 +17,9 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Mason Tsui" => "mason@mailtime.com" }
   spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
   spec.ios.deployment_target = "12.0"
-  # spec.osx.deployment_target = "10.7"
-  # spec.watchos.deployment_target = "2.0"
-  # spec.tvos.deployment_target = "9.0"
-  # spec.visionos.deployment_target = "1.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -68,6 +63,10 @@ Pod::Spec.new do |spec|
   spec.ios.preserve_paths = "*"
 
   # spec.public_header_files = "Classes/**/*.h"
+
+  spec.xcconfig = {
+    "OTHER_LDFLAGS": "$(inherited) -ObjC -framework \"App\" -framework \"FlutterPluginRegistrant\" -framework \"OrderedSet\" -framework \"Flutter\" -framework \"app_links\" -framework \"device_info_plus\" -framework \"flutter_inappwebview_ios\""
+  }
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
