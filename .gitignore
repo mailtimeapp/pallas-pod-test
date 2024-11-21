@@ -1,4 +1,6 @@
 *build
 *release
-*Pallas_Frameworks
+# *Pallas_Frameworks
 *_output
+*.zip
+*dSYMs

@@ -33,8 +33,8 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  # spec.source       = { :git => "https://github.com/mailtimeapp/pallas-pod-test.git", :tag => "#{spec.version}" }
-  spec.source       = { :http => "https://github.com/mailtimeapp/pallas-pod-test/releases/download/#{spec.version}/Pallas_Frameworks.zip", :type => "zip"}
+  spec.source       = { :git => "https://github.com/mailtimeapp/pallas-pod-test.git", :tag => "#{spec.version}" }
+  # spec.source       = { :http => "https://github.com/mailtimeapp/pallas-pod-test/releases/download/#{spec.version}/Pallas_Frameworks.zip", :type => "zip"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -46,24 +46,24 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source_files  = "release/*.framework/Headers/**/*.h"
-  # spec.vendored_frameworks = [
-  #   "Pallas_Frameworks/App.xcframework",
-  #   "Pallas_Frameworks/app_links.xcframework",
-  #   "Pallas_Frameworks/device_info_plus.xcframework",
-  #   "Pallas_Frameworks/flutter_inappwebview_ios.xcframework",
-  #   "Pallas_Frameworks/FlutterPluginRegistrant.xcframework",
-  #   "Pallas_Frameworks/OrderedSet.xcframework",
-  #   "Pallas_Frameworks/ShorebirdFlutter.xcframework",
-  # ]
   spec.vendored_frameworks = [
-    "App.xcframework",
-    "app_links.xcframework",
-    "device_info_plus.xcframework",
-    "flutter_inappwebview_ios.xcframework",
-    "FlutterPluginRegistrant.xcframework",
-    "OrderedSet.xcframework",
-    "ShorebirdFlutter.xcframework",
+    "Pallas_Frameworks/App.xcframework",
+    "Pallas_Frameworks/app_links.xcframework",
+    "Pallas_Frameworks/device_info_plus.xcframework",
+    "Pallas_Frameworks/flutter_inappwebview_ios.xcframework",
+    "Pallas_Frameworks/FlutterPluginRegistrant.xcframework",
+    "Pallas_Frameworks/OrderedSet.xcframework",
+    "Pallas_Frameworks/ShorebirdFlutter.xcframework",
   ]
+  # spec.vendored_frameworks = [
+  #   "App.xcframework",
+  #   "app_links.xcframework",
+  #   "device_info_plus.xcframework",
+  #   "flutter_inappwebview_ios.xcframework",
+  #   "FlutterPluginRegistrant.xcframework",
+  #   "OrderedSet.xcframework",
+  #   "ShorebirdFlutter.xcframework",
+  # ]
   # spec.ios.vendored_frameworks = "*.xcframework"
   spec.ios.preserve_paths = "*"
 
